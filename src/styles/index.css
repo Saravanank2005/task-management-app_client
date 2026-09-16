@@ -1,37 +1,37 @@
 :root {
   --font-primary: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   
-  /* Color Palette - Dark Theme Slate */
-  --bg-main: #0b0f19;
-  --bg-card: #111827;
-  --bg-card-hover: #1f293d;
-  --bg-input: #1a2234;
-  --bg-glass: rgba(17, 24, 39, 0.75);
+  /* Color Palette - White & Slate Grey Minimalist Theme */
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-input: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.88);
   
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-focus: #6366f1;
+  --border-color: #e2e8f0;
+  --border-focus: #0f172a;
   
-  --text-main: #f3f4f6;
-  --text-muted: #9ca3af;
-  --text-dim: #6b7280;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
   
-  /* Brand Colors */
-  --primary: #6366f1;
-  --primary-hover: #4f46e5;
-  --primary-light: rgba(99, 102, 241, 0.15);
+  /* Brand Colors - Minimalist Charcoal Slate */
+  --primary: #0f172a;
+  --primary-hover: #1e293b;
+  --primary-light: #f1f5f9;
   
   /* Status Colors */
-  --status-planned-bg: rgba(245, 158, 11, 0.12);
-  --status-planned-text: #f59e0b;
-  --status-planned-border: rgba(245, 158, 11, 0.3);
+  --status-planned-bg: #fef3c7;
+  --status-planned-text: #b45309;
+  --status-planned-border: #fde68a;
   
-  --status-inprogress-bg: rgba(59, 130, 246, 0.12);
-  --status-inprogress-text: #3b82f6;
-  --status-inprogress-border: rgba(59, 130, 246, 0.3);
+  --status-inprogress-bg: #f1f5f9;
+  --status-inprogress-text: #334155;
+  --status-inprogress-border: #cbd5e1;
   
-  --status-complete-bg: rgba(16, 185, 129, 0.12);
-  --status-complete-text: #10b981;
-  --status-complete-border: rgba(16, 185, 129, 0.3);
+  --status-complete-bg: #d1fae5;
+  --status-complete-text: #047857;
+  --status-complete-border: #a7f3d0;
   
   /* Utilities */
   --radius-sm: 8px;
@@ -39,10 +39,10 @@
   --radius-lg: 16px;
   --radius-full: 9999px;
   
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.25);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 4px 12px rgba(15, 23, 42, 0.1);
   
   --transition-fast: all 0.15s ease;
   --transition-normal: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,11 +72,11 @@ body {
   background: var(--bg-main);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2d3748;
+  background: #cbd5e1;
   border-radius: var(--radius-full);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #4a5568;
+  background: #94a3b8;
 }
 
 /* App Container */
@@ -107,6 +107,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: var(--shadow-sm);
 }
 
 .nav-brand {
@@ -123,12 +124,12 @@ body {
   width: 36px;
   height: 36px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--primary), #a855f7);
+  background: #0f172a;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-sm);
 }
 
 .user-profile-menu {
@@ -145,6 +146,7 @@ body {
   border: 1px solid var(--border-color);
   padding: 0.4rem 0.8rem;
   border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
 }
 
 .user-avatar {
@@ -157,6 +159,7 @@ body {
 .user-name {
   font-weight: 600;
   font-size: 0.875rem;
+  color: var(--text-main);
 }
 
 /* Buttons */
@@ -175,36 +178,36 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), #4f46e5);
+  background: #0f172a;
   color: white;
   box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-  opacity: 0.92;
+  background: #1e293b;
   transform: translateY(-1px);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 1px solid var(--border-color);
   color: var(--text-main);
 }
 
 .btn-secondary:hover {
-  background: var(--bg-card-hover);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: #f8fafc;
+  border-color: #cbd5e1;
 }
 
 .btn-danger {
-  background: rgba(239, 68, 68, 0.15);
-  color: #ef4444;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
 }
 
 .btn-danger:hover {
-  background: rgba(239, 68, 68, 0.25);
+  background: #fee2e2;
 }
 
 .btn-sm {
@@ -233,9 +236,7 @@ body {
   font-size: 1.85rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #ffffff, #9ca3af);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #0f172a;
 }
 
 .title-wrap p {
@@ -255,6 +256,7 @@ body {
   border: 1px solid var(--border-color);
   padding: 0.75rem 1rem;
   border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .filter-tabs {
@@ -271,7 +273,7 @@ body {
   font-weight: 600;
   background: transparent;
   color: var(--text-muted);
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
   transition: var(--transition-fast);
   white-space: nowrap;
@@ -282,24 +284,26 @@ body {
 
 .tab-btn:hover {
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.04);
+  background: #f1f5f9;
 }
 
 .tab-btn.active {
-  background: var(--primary-light);
-  color: #818cf8;
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #0f172a;
 }
 
 .tab-count {
-  background: rgba(255, 255, 255, 0.1);
+  background: #f1f5f9;
+  color: #475569;
   padding: 0.1rem 0.45rem;
   border-radius: var(--radius-full);
   font-size: 0.75rem;
 }
 
 .tab-btn.active .tab-count {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 .search-box {
@@ -333,7 +337,7 @@ body {
 
 .search-input:focus {
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08);
 }
 
 /* Task Cards Grid */
@@ -356,11 +360,12 @@ body {
   gap: 1rem;
   transition: var(--transition-normal);
   position: relative;
+  box-shadow: var(--shadow-sm);
 }
 
 .task-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.18);
+  border-color: #cbd5e1;
   box-shadow: var(--shadow-md);
 }
 
@@ -380,7 +385,7 @@ body {
 
 .task-card.completed .task-title {
   text-decoration: line-through;
-  color: var(--text-muted);
+  color: var(--text-dim);
 }
 
 .task-description {
@@ -477,12 +482,12 @@ body {
 
 .icon-btn:hover {
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.08);
+  background: #f1f5f9;
 }
 
 .icon-btn.delete:hover {
-  color: #ef4444;
-  background: rgba(239, 68, 68, 0.15);
+  color: #dc2626;
+  background: #fef2f2;
 }
 
 /* Empty State */
@@ -499,8 +504,8 @@ body {
   width: 56px;
   height: 56px;
   margin: 0 auto 1rem;
-  color: var(--text-dim);
-  background: var(--primary-light);
+  color: #475569;
+  background: #f1f5f9;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -524,8 +529,8 @@ body {
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -553,6 +558,7 @@ body {
 .modal-header h2 {
   font-size: 1.35rem;
   font-weight: 800;
+  color: var(--text-main);
 }
 
 .form-group {
@@ -582,7 +588,7 @@ body {
 
 .form-control:focus {
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08);
 }
 
 textarea.form-control {
@@ -606,24 +612,26 @@ textarea.form-control {
   max-width: 460px;
   width: 100%;
   text-align: center;
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  box-shadow: var(--shadow-lg);
 }
 
 .auth-logo {
   width: 64px;
   height: 64px;
   border-radius: 18px;
-  background: linear-gradient(135deg, var(--primary), #a855f7);
+  background: #0f172a;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   margin: 0 auto 1.5rem;
+  box-shadow: var(--shadow-md);
 }
 
 .auth-title {
   font-size: 1.75rem;
   font-weight: 800;
+  color: var(--text-main);
 }
 
 .auth-subtitle {
@@ -650,8 +658,9 @@ textarea.form-control {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #818cf8;
-  background: var(--primary-light);
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
   margin-bottom: 0.75rem;

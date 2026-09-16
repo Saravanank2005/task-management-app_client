@@ -127,7 +127,7 @@ export default function LoginModal() {
               onError={() => {
                 console.error('Google Auth Failed');
               }}
-              theme="filled_blue"
+              theme="outline"
               shape="pill"
               text="continue_with"
               size="large"
@@ -142,7 +142,7 @@ export default function LoginModal() {
           {/* Persistent Global Demo Account Button */}
           <div className="demo-login-box">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', marginBottom: '0.5rem' }}>
-              <Globe size={14} style={{ color: '#818cf8' }} />
+              <Globe size={14} style={{ color: '#475569' }} />
               <span className="demo-badge">Global Cross-Device Demo Account</span>
             </div>
 

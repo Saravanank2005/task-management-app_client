@@ -7,7 +7,7 @@ export default function Navbar() {
   const [imgError, setImgError] = useState(false);
 
   const fallbackAvatar = user?.name
-    ? `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=6366f1&color=fff`
+    ? `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=0f172a&color=fff`
     : '';
 
   return (
