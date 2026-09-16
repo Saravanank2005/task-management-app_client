@@ -16,7 +16,7 @@ export default function LoginModal() {
 
         <h1 className="auth-title">Welcome to Task360</h1>
         <p className="auth-subtitle">
-          {authMode === 'signup' 
+          {authMode === 'signup'
             ? 'Sign up with your Google account. Your user profile and tasks will be saved securely in MongoDB Atlas.'
             : 'Sign in with your Google account to access your Task360 dashboard.'}
         </p>
@@ -133,7 +133,7 @@ export default function LoginModal() {
               size="large"
             />
             <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>
-              {authMode === 'signup' 
+              {authMode === 'signup'
                 ? 'Create user record & store in Atlas DB'
                 : 'Authenticate and load Task360 dashboard'}
             </span>
@@ -145,16 +145,14 @@ export default function LoginModal() {
               <Globe size={14} style={{ color: '#818cf8' }} />
               <span className="demo-badge">Global Cross-Device Demo Account</span>
             </div>
-            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
-              Instant access! Demo tasks are saved in MongoDB Atlas and synced across all browsers and devices:
-            </p>
+
             <button
               className="btn btn-primary"
               style={{ width: '100%', justifyContent: 'center' }}
               onClick={() => loginDemo()}
             >
               <UserCheck size={18} />
-              <span>One-Click Task360 Demo Account Sign In</span>
+              <span>Task360 Demo Account</span>
             </button>
           </div>
         </div>
