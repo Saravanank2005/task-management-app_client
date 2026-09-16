@@ -9,6 +9,7 @@ export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [filterStatus, setFilterStatus] = useState('All'); // All, Planned, In Progress, Complete
+  const [searchQuery, setSearchQuery] = useState('');
   const [page, setPage] = useState(1);
   const [limit] = useState(10);
   const [totalPages, setTotalPages] = useState(1);
