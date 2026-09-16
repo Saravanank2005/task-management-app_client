@@ -9,7 +9,10 @@ export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [filterStatus, setFilterStatus] = useState('All'); // All, Planned, In Progress, Complete
-  const [searchQuery, setSearchQuery] = useState('');
+  const [page, setPage] = useState(1);
+  const [limit] = useState(10);
+  const [totalPages, setTotalPages] = useState(1);
+  const [totalTasks, setTotalTasks] = useState(0);
   const [toast, setToast] = useState(null);
 
   const showToast = (message, type = 'success') => {
@@ -23,7 +26,7 @@ export const TaskProvider = ({ children }) => {
     if (!user) return;
     try {
       setLoading(true);
-      const params = {};
+      const params = { page, limit };
       if (filterStatus !== 'All') {
         params.status = filterStatus;
       }
@@ -32,12 +35,14 @@ export const TaskProvider = ({ children }) => {
       }
       const res = await taskAPI.getTasks(params);
       setTasks(res.data.tasks || []);
+      setTotalPages(res.data.totalPages || 1);
+      setTotalTasks(res.data.totalTasks || 0);
     } catch (err) {
       showToast(err.response?.data?.message || 'Error fetching tasks', 'error');
     } finally {
       setLoading(false);
     }
-  }, [user, filterStatus, searchQuery]);
+  }, [user, filterStatus, searchQuery, page, limit]);
 
   useEffect(() => {
     fetchTasks();
@@ -112,6 +117,10 @@ export const TaskProvider = ({ children }) => {
         setFilterStatus,
         searchQuery,
         setSearchQuery,
+        page,
+        setPage,
+        totalPages,
+        totalTasks,
         stats,
         toast,
         addTask,
