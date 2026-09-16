@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { GoogleLogin } from '@react-oauth/google';
-import { Zap, UserCheck, AlertTriangle, UserPlus, LogIn, Database, Globe } from 'lucide-react';
+import { Zap, UserCheck, AlertTriangle, UserPlus, LogIn, Globe } from 'lucide-react';
 
 export default function LoginModal() {
   const { loginWithGoogle, loginDemo, authError } = useAuth();
@@ -20,24 +20,6 @@ export default function LoginModal() {
             ? 'Sign up with your Google account. Your user profile and tasks will be saved securely in MongoDB Atlas.'
             : 'Sign in with your Google account to access your Task360 dashboard.'}
         </p>
-
-        {/* MongoDB Atlas Sync Badge */}
-        <div style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '0.4rem',
-          background: 'rgba(16, 185, 129, 0.12)',
-          color: '#10b981',
-          border: '1px solid rgba(16, 185, 129, 0.3)',
-          padding: '0.3rem 0.75rem',
-          borderRadius: '9999px',
-          fontSize: '0.78rem',
-          fontWeight: 600,
-          marginBottom: '1.25rem'
-        }}>
-          <Database size={13} />
-          <span>MongoDB Atlas Data Storage Active</span>
-        </div>
 
         {/* Toggle between Sign Up and Sign In */}
         <div style={{
