@@ -7,7 +7,7 @@
 ## 🤖 1. AI Tools Utilized
 
 - **ChatGPT**: Utilized for initial prompt structuring, project initialization, architecture breakdown, and requirement formatting.
-- **Gemini 3.6 Flash (Antigravity Agent)**: Utilized for full-stack coding, Express API routes, React component composition, database schema design, and live deployment error debugging.
+- **Gemini 3.6 Flash **: Utilized for full-stack coding, Express API routes, React component composition, database schema design, and live deployment error debugging.
 
 ---
 
