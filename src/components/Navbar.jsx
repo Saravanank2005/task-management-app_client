@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { Zap, LogOut, User as UserIcon } from 'lucide-react';
+import { CircleDot, LogOut, User as UserIcon } from 'lucide-react';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -14,7 +14,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="nav-brand">
         <div className="brand-icon">
-          <Zap size={20} />
+          <CircleDot size={20} />
         </div>
         <span>Task360</span>
       </div>

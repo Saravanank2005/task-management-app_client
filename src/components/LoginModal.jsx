@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { GoogleLogin } from '@react-oauth/google';
-import { Zap, UserCheck, AlertTriangle, UserPlus, LogIn, Globe } from 'lucide-react';
+import { CircleDot, UserCheck, AlertTriangle, UserPlus, LogIn, Globe } from 'lucide-react';
 
 export default function LoginModal() {
   const { loginWithGoogle, loginDemo, authError } = useAuth();
@@ -11,7 +11,7 @@ export default function LoginModal() {
     <div className="auth-hero">
       <div className="auth-card">
         <div className="auth-logo">
-          <Zap size={32} />
+          <CircleDot size={32} />
         </div>
 
         <h1 className="auth-title">Welcome to Task360</h1>
